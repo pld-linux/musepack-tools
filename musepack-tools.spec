@@ -14,6 +14,8 @@ Source0:	http://files.musepack.net/source/musepack_src_r%{rev}.tar.gz
 Patch0:		%{name}-libs.patch
 URL:		http://www.musepack.net/
 BuildRequires:	cmake >= 2.4
+BuildRequires:	libcuefile-devel
+BuildRequires:	libreplaygain-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
