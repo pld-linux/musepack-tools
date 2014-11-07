@@ -6,7 +6,7 @@
 Summary:	Musepack SV8 tools
 Name:		musepack-tools
 Version:	0.0.1.r%{rev}
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://files.musepack.net/source/musepack_src_r%{rev}.tar.gz
