@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without  static_libs     # don't build static library
+%bcond_without  static_libs     # static library
 #
 %define		rev	475
 Summary:	Musepack SV8 tools
@@ -10,6 +10,7 @@ Version:	0.0.1.r%{rev}
 Release:	4
 License:	GPL v2+
 Group:		Libraries
+#Source0Download: https://www.musepack.net/index.php?pg=src
 Source0:	http://files.musepack.net/source/musepack_src_r%{rev}.tar.gz
 # Source0-md5:	754d67be67f713e54baf70fcfdb2817e
 Patch0:		%{name}-libs.patch
