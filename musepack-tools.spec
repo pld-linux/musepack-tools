@@ -7,7 +7,7 @@ Summary:	Musepack SV8 tools
 Summary(pl.UTF-8):	Narzędzia Musepack SV8
 Name:		musepack-tools
 Version:	0.0.1.r%{rev}
-Release:	4
+Release:	5
 License:	GPL v2+
 Group:		Libraries
 #Source0Download: https://www.musepack.net/index.php?pg=src
@@ -66,13 +66,19 @@ Statyczna wersja biblioteki Musepack SV8.
 %setup -q -n musepack_src_r%{rev}
 %patch0 -p0
 
+%{__rm} -r include/mpc/.svn
+
 %build
-%cmake
+install -d build
+cd build
+%cmake ..
+
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} -C build install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
