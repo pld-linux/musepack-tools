@@ -14,6 +14,7 @@ Group:		Libraries
 Source0:	http://files.musepack.net/source/musepack_src_r%{rev}.tar.gz
 # Source0-md5:	754d67be67f713e54baf70fcfdb2817e
 Patch0:		%{name}-libs.patch
+Patch1:		%{name}-fno-common.patch
 URL:		http://www.musepack.net/
 BuildRequires:	cmake >= 2.4
 BuildRequires:	libcuefile-devel
@@ -65,6 +66,7 @@ Statyczna wersja biblioteki Musepack SV8.
 %prep
 %setup -q -n musepack_src_r%{rev}
 %patch0 -p0
+%patch1 -p1
 
 %{__rm} -r include/mpc/.svn
 
